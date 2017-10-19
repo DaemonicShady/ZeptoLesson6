@@ -51,7 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\RotateOnTap.cs" />
+     <Compile Include="Assets\Scripts\CameraRotate.cs" />
+     <Compile Include="Assets\Scripts\RotateOnTap.cs" />
      <None Include="Assets\Shaders\PlaneShaderOld.shader" />
      <None Include="Assets\Shaders\PlaneShader.shader" />
      <None Include="Assets\Shaders\PlaneShader2.shader" />

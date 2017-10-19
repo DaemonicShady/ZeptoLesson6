@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b7cf54f6d384f689c3c583b3f2c8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_angleDelta: 1
 --- !u!1 &528713050
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +287,7 @@ GameObject:
   - component: {fileID: 1659933457}
   - component: {fileID: 1659933456}
   - component: {fileID: 1659933455}
+  - component: {fileID: 1659933459}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -355,3 +357,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1659933459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659933454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4955be9fb723240668d84b8052519672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_camera: {fileID: 1659933458}
+  m_sensitivity: 1
+  target: {fileID: 488824078}
+  targetOffset: {x: 10, y: 10, z: 10}
+  distance: 5
+  maxDistance: 20
+  minDistance: 0.6
+  xSpeed: 200
+  ySpeed: 200
+  yMinLimit: -80
+  yMaxLimit: 80
+  zoomRate: 40
+  panSpeed: 4
+  zoomDampening: 5

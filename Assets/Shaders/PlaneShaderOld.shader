@@ -14,10 +14,8 @@ Shader "Unlit/PlaneShaderOld"
 		Pass
 		{
 			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			// make fog work
-			//#pragma multi_compile_fog
+			#pragma vertex vertexShader
+			#pragma fragment fragmentShader
 			
 			#include "UnityCG.cginc"
 
@@ -29,27 +27,21 @@ Shader "Unlit/PlaneShaderOld"
 
 			struct v2f
 			{
-				//float2 uv : TEXCOORD0;
-				//UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 			};
 
 			//sampler2D _MainTex;
-			float4 _MainTex_ST;
+			//float4 _MainTex_ST;
 			
-			v2f vert (appdata v)
+			v2f vertexShader(appdata vertexData)
 			{
 				v2f output;
-				//float4 position = mul(unity_ObjectToWorld, mul(UNITY_MATRIX_V, mul(UNITY_MATRIX_P, v.vertex)));
-				//float4 position = mul(UNITY_MATRIX_MVP, v.vertex);
-				float4 position = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, v.vertex)));
+				float4 position = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, vertexData.vertex)));
 				output.vertex = position;
-				//o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				//UNITY_TRANSFER_FOG(o,o.vertex);
 				return output;
 			}
 			
-			fixed4 frag (v2f i) : SV_Target
+			fixed4 fragmentShader(v2f fragmentData) : SV_Target
 			{
 				// sample the texture
 				//fixed4 col = tex2D(_MainTex, i.uv);
