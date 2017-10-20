@@ -53,7 +53,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraRotate.cs" />
      <Compile Include="Assets\Scripts\RotateOnTap.cs" />
+     <None Include="Assets\Shaders\UnityDiffuseShader.shader" />
      <None Include="Assets\Shaders\PlaneShaderOld.shader" />
+     <None Include="Assets\Shaders\DiffuseShader.shader" />
      <None Include="Assets\Shaders\PlaneShader.shader" />
      <None Include="Assets\Shaders\PlaneShader2.shader" />
  <Reference Include="UnityEngine.UI">
