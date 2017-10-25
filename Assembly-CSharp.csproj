@@ -54,9 +54,11 @@
      <Compile Include="Assets\Scripts\CameraRotate.cs" />
      <Compile Include="Assets\Scripts\RotateOnTap.cs" />
      <None Include="Assets\Shaders\DirectionDiffuseShader.shader" />
+     <None Include="Assets\Shaders\WrapAround.shader" />
      <None Include="Assets\Shaders\SimpleShader.shader" />
      <None Include="Assets\Shaders\PointDiffuseShader.shader" />
      <None Include="Assets\Shaders\TextureShader.shader" />
+     <None Include="Assets\Shaders\PhongShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
