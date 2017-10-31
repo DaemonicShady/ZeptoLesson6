@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: defaultMat
-  m_Shader: {fileID: 4800000, guid: 6100a662f505143cd9fd50c2811f4a27, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9352c5b02410c4438b6d51fb6c1d56a0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -79,6 +79,6 @@ Material:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _LightPosition: {r: 0, g: 20, b: 5, a: 1}
-    - _ObjectColor: {r: 0.5, g: 0, b: 0, a: 1}
+    - _ObjectColor: {r: 1, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.5, g: 0, b: 0.2, a: 1}
     - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

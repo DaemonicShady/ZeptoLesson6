@@ -25,13 +25,19 @@
                 float4 vertex : SV_POSITION;
             };
 
+            // appdata_base is a Unity3D embedded struct with vertex position, normal and
+            // texture coordinate.
+            // https://docs.unity3d.com/Manual/SL-BuiltinIncludes.html
             v2f vertexShader(appdata_base v)
             {
                 v2f output;
+
                 output.vertex = UnityObjectToClipPos(v.vertex);
                 half3 worldNormal = UnityObjectToWorldNormal(v.normal);
-                half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
-                output.color = nl * _LightColor0;
+
+                half coeff = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
+                output.color = coeff * _LightColor0;
+
                 return output;
             }
 

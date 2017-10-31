@@ -13,25 +13,25 @@
 			
 			#include "UnityCG.cginc"
 
-			struct Appdata
+			struct appdata
 			{
 				float4 vertex : POSITION;
 			};
 
-			struct VaryingData
+			struct varyingData
 			{
 				float4 vertex : SV_POSITION;
 			};
 			
-			VaryingData vertexShader(Appdata vertexData)
+			varyingData vertexShader(appdata vertexData)
 			{
-				VaryingData output;
+				varyingData output;
 				output.vertex = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, vertexData.vertex)));
 
 				return output;
 			}
 			
-			fixed4 fragmentShader(VaryingData fragmentData) : SV_Target
+			fixed4 fragmentShader(varyingData fragmentData) : SV_Target
 			{
 				return fixed4(1.0f, 0.0f, 0.0f, 1.0f);
 			}
