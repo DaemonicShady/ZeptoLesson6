@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C35F6F57-4FD1-B4E6-BE02-7333F5666981}</ProjectGuid>
+    <ProjectGuid>{46195939-2687-2918-63B3-9BCA39252555}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,8 +57,6 @@
      <None Include="Assets\Shaders\WrapAround.shader" />
      <None Include="Assets\Shaders\SimpleShader.shader" />
      <None Include="Assets\Shaders\PointDiffuseShader.shader" />
-     <None Include="Assets\Shaders\TextureShader.shader" />
-     <None Include="Assets\Shaders\PhongShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

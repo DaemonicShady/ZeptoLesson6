@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6", "Assembly-CSharp.csproj", "{C35F6F57-4FD1-B4E6-BE02-7333F5666981}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderLighting", "Assembly-CSharp.csproj", "{46195939-2687-2918-63B3-9BCA39252555}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C35F6F57-4FD1-B4E6-BE02-7333F5666981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C35F6F57-4FD1-B4E6-BE02-7333F5666981}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C35F6F57-4FD1-B4E6-BE02-7333F5666981}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C35F6F57-4FD1-B4E6-BE02-7333F5666981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46195939-2687-2918-63B3-9BCA39252555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46195939-2687-2918-63B3-9BCA39252555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46195939-2687-2918-63B3-9BCA39252555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46195939-2687-2918-63B3-9BCA39252555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
