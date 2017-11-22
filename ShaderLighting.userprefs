@@ -1,16 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/PhongShader.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/DirectionDiffuseShader.shader">
     <Files>
+      <File FileName="Assets/Shaders/DirectionDiffuseShader.shader" Line="28" Column="34" />
       <File FileName="Assets/Scripts/CameraRotate.cs" Line="1" Column="1" />
-      <File FileName="Assets/Shaders/TextureShader.shader" Line="5" Column="3" />
-      <File FileName="Assets/Shaders/SimpleShader.shader" Line="17" Column="5" />
-      <File FileName="Assets/Shaders/PointDiffuseShader.shader" Line="17" Column="35" />
-      <File FileName="Assets/Shaders/DirectionDiffuseShader.shader" Line="23" Column="14" />
-      <File FileName="Assets/Shaders/WrapAround.shader" Line="56" Column="125" />
-      <File FileName="Assets/Shaders/PhongShader.shader" Line="10" Column="11" />
-      <File FileName="Assets/Shaders/ToonShader.shader" Line="63" Column="26" />
-      <File FileName="Assets/Shaders/RimShader.shader" Line="71" Column="51" />
+      <File FileName="Assets/Shaders/SimpleShader.shader" Line="21" Column="12" />
+      <File FileName="Assets/Shaders/PointDiffuseShader.shader" Line="37" Column="28" />
+      <File FileName="Assets/Shaders/WrapAround.shader" Line="46" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
