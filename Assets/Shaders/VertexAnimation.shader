@@ -2,7 +2,9 @@
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		_Coeff ("coeff", float) = 0.0
+		_Phase ("phase", float) = 0.0
+		_PhaseMultiplier ("phase multiplier", float) = 0.0
 	}
 	SubShader
 	{
@@ -12,45 +14,38 @@
 		Pass
 		{
 			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
+			#pragma vertex vertexShader
+			#pragma fragment fragmentShader
 			
 			#include "UnityCG.cginc"
 
 			struct appdata
 			{
 				float4 vertex : POSITION;
-				float2 uv : TEXCOORD0;
 			};
 
-			struct v2f
+			float _Coeff;
+			float _Phase;
+			float _PhaseMultiplier;
+
+			struct varyingData
 			{
-				float2 uv : TEXCOORD0;
-				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 			};
-
-			sampler2D _MainTex;
-			float4 _MainTex_ST;
 			
-			v2f vert (appdata v)
+			varyingData vertexShader(appdata vertexData)
 			{
-				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
-				return o;
+				varyingData output;
+
+				vertexData.vertex.y += _Coeff * sin(vertexData.vertex.x * _Phase * _PhaseMultiplier);
+				output.vertex = mul(UNITY_MATRIX_P, mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, vertexData.vertex)));
+
+				return output;
 			}
 			
-			fixed4 frag (v2f i) : SV_Target
+			fixed4 fragmentShader(varyingData fragmentData) : SV_Target
 			{
-				// sample the texture
-				fixed4 col = tex2D(_MainTex, i.uv);
-				// apply fog
-				UNITY_APPLY_FOG(i.fogCoord, col);
-				return col;
+				return fixed4(1.0f, 0.0f, 0.0f, 1.0f);
 			}
 			ENDCG
 		}

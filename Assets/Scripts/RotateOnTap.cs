@@ -7,6 +7,8 @@ public class RotateOnTap : MonoBehaviour {
 	[SerializeField]
 	private float m_angleDelta;
 
+	private float m_shaderPhase;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,5 +27,8 @@ public class RotateOnTap : MonoBehaviour {
 
 		if (Input.GetKey(KeyCode.DownArrow))
 			transform.Rotate(0.0f, -m_angleDelta, 0.0f);
+
+		m_shaderPhase += 0.01f;
+		GetComponent<MeshRenderer>().material.SetFloat("_Phase", m_shaderPhase);
 	}
 }
